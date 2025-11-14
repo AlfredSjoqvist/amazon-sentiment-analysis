@@ -100,12 +100,20 @@ The raw CSV file is kept in `preprocessing/` (or in `data/raw/` if further separ
 
 ---
 
+## Download Training Data
+The training dataset is available on the project release page:
+
+👉 [**Download Reviews.csv**](https://github.com/AlfredSjoqvist/amazon-sentiment-analysis/releases/latest)
+
+---
+
 ## Usage
 
 A typical workflow:
 
-1. Run the preprocessing pipeline scripts in order.  
-2. Run one of the training scripts, for example:
+1. Download the training dataset csv-file and put it under data/
+2. Run the preprocessing pipeline scripts in order.  
+3. Run one of the training scripts, for example:
 
    ```bash
    python src/train_logistic_regression.py
