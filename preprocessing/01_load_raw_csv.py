@@ -4,8 +4,8 @@ import re as re
 import os
 
 # Read data frame from CSV
-df = pd.read_csv(os.path.join("preprocessing", "Reviews.csv"))
+df = pd.read_csv(os.path.join("data", "Reviews.csv"))
 
 # Save the data frame to a pickle file for later use
-with open(os.path.join("preprocessing", 'raw_dataframe.pickle'), 'wb') as handle:
+with open(os.path.join("data", 'raw_dataframe.pickle'), 'wb') as handle:
     pickle.dump(df, handle, protocol=pickle.HIGHEST_PROTOCOL)

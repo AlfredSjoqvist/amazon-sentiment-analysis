@@ -4,7 +4,7 @@ import re as re
 import os
 
 # Unpickle the data
-with open(os.path.join("preprocessing", 'lowercase_data.pickle'), 'rb') as handle:
+with open(os.path.join("data", 'lowercase_data.pickle'), 'rb') as handle:
     df = pickle.load(handle)
 
 
@@ -25,5 +25,5 @@ df['Text']=df['Text'].apply(cleanempty)
 
 
 # Pickle the data
-with open(os.path.join("preprocessing", 'no_whitespaces_data.pickle'), 'wb') as handle:
+with open(os.path.join("data", 'no_whitespaces_data.pickle'), 'wb') as handle:
     pickle.dump(df, handle, protocol=pickle.HIGHEST_PROTOCOL)

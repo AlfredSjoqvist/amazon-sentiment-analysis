@@ -4,7 +4,7 @@ import re as re
 import os
 
 # Unpickle the data
-with open(os.path.join("preprocessing", 'unlabeled_data.pickle'), 'rb') as handle:
+with open(os.path.join("data", 'unlabeled_data.pickle'), 'rb') as handle:
     df = pickle.load(handle)
 
 # Remove HTML Tags
@@ -15,5 +15,5 @@ def remove_tags(string):
 df['Text']=df['Text'].apply(lambda cw : remove_tags(cw))
 
 # Pickle the data
-with open(os.path.join("preprocessing", 'no_html_data.pickle'), 'wb') as handle:
+with open(os.path.join("data", 'no_html_data.pickle'), 'wb') as handle:
     pickle.dump(df, handle, protocol=pickle.HIGHEST_PROTOCOL)

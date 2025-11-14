@@ -4,10 +4,10 @@ from sklearn import metrics
 import os
 from sklearn.ensemble import GradientBoostingClassifier
 
-with open(os.path.join("preprocessing", 'reviews.pickle'), 'rb') as handle:
+with open(os.path.join("data", 'reviews.pickle'), 'rb') as handle:
     reviews = pickle.load(handle)
 
-with open(os.path.join("preprocessing", 'labels.pickle'), 'rb') as handle:
+with open(os.path.join("data", 'labels.pickle'), 'rb') as handle:
     labels = pickle.load(handle)
 
 confusion_matrix = {5: {5: 0, 4: 0, 3: 0, 2: 0, 1: 0}, 

@@ -4,7 +4,7 @@ import re as re
 import os
 
 # Unpickle the data
-with open(os.path.join("preprocessing", 'raw_dataframe.pickle'), 'rb') as handle:
+with open(os.path.join("data", 'raw_dataframe.pickle'), 'rb') as handle:
     df = pickle.load(handle)
 
 
@@ -19,5 +19,5 @@ df.drop_duplicates(inplace=True)
 
 
 # Pickle the data
-with open(os.path.join("preprocessing", 'unlabeled_data.pickle'), 'wb') as handle:
+with open(os.path.join("data", 'unlabeled_data.pickle'), 'wb') as handle:
     pickle.dump(df, handle, protocol=pickle.HIGHEST_PROTOCOL)

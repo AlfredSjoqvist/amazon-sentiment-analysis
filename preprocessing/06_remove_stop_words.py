@@ -24,7 +24,7 @@ stop_words = ["im", 'have', 'my', 'or', 'be', 'very', 'needn', 'his', 'shan', 'o
               'your', 'each', 're', 'y', 'again', 'he', 'but']
 
 # Unpickle the data
-with open(os.path.join("preprocessing", 'no_whitespaces_data.pickle'), 'rb') as handle:
+with open(os.path.join("data", 'no_whitespaces_data.pickle'), 'rb') as handle:
     df = pickle.load(handle)
 
 
@@ -42,5 +42,5 @@ df['Text']=df['Text'].apply(remove_stop)
 
 
 # Pickle the data
-with open(os.path.join("preprocessing", 'no_stop_words_data.pickle'), 'wb') as handle:
+with open(os.path.join("data", 'no_stop_words_data.pickle'), 'wb') as handle:
     pickle.dump(df, handle, protocol=pickle.HIGHEST_PROTOCOL)

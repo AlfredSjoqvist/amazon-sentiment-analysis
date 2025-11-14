@@ -4,7 +4,7 @@ import re as re
 import os
 
 # Unpickle the data
-with open(os.path.join("preprocessing", 'joined_sentences_data.pickle'), 'rb') as handle:
+with open(os.path.join("data", 'joined_sentences_data.pickle'), 'rb') as handle:
     df = pickle.load(handle)
 
 # Put the reviews and corresponding scores in lists
@@ -26,8 +26,8 @@ df['Score']=df['Score'].apply(savescore)
 
 
 # Pickle the data
-with open(os.path.join("preprocessing", 'reviews.pickle'), 'wb') as handle:
+with open(os.path.join("data", 'reviews.pickle'), 'wb') as handle:
     pickle.dump(review_list, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-with open(os.path.join("preprocessing", 'labels.pickle'), 'wb') as handle:
+with open(os.path.join("data", 'labels.pickle'), 'wb') as handle:
     pickle.dump(label_list, handle, protocol=pickle.HIGHEST_PROTOCOL)
